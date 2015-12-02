@@ -1,0 +1,10 @@
+<resources>
+    <string name="add_widget">Add widget</string>
+    <string name="add_widget_from_launcher">Please add Lock the Screen widget from launcher.</string>
+    <string name="app_name">Lock The Screen</string>
+    <string name="configure_step_1">Step 1. Enable device administrator for Screen Lock.</string>
+    <string name="configure_step_2">Step 2. Click to finish adding widget.</string>
+    <string name="enable_device_admin">Enable device administrator</string>
+    <string name="need_to_enable_device_admin">Need to activate device administrator.</string>
+    <string name="reenable_device_admin">Please re-enable device administrator for Lock The Screen.</string>
+</resources>

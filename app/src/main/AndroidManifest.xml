@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jascvalentine.lockthescreen">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/power"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Receiver for Device Admin -->
+        <receiver
+            android:name=".widget.LockTheScreenWidgetConfigureActivity$DeviceAdminSampleReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <!-- The widget in home screen -->
+        <receiver android:name=".widget.LockTheScreenWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/lock_the_screen_widget_info" />
+        </receiver>
+        <!-- Widget configuration activity -->
+        <activity android:name=".widget.LockTheScreenWidgetConfigureActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <!-- Activity from clicking the widget at home screen -->
+        <activity android:name=".widget.LockTheScreenWidgetActivity" />
+    </application>
+
+</manifest>
