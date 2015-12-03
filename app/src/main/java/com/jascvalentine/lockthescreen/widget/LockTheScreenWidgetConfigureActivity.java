@@ -1,5 +1,6 @@
 package com.jascvalentine.lockthescreen.widget;
 
+import android.app.Activity;
 import android.app.admin.DeviceAdminReceiver;
 import android.app.admin.DevicePolicyManager;
 import android.appwidget.AppWidgetManager;
@@ -7,7 +8,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -17,7 +17,7 @@ import com.jascvalentine.lockthescreen.R;
 /**
  * The configuration screen for the {@link LockTheScreenWidget LockTheScreenWidget} AppWidget.
  */
-public class LockTheScreenWidgetConfigureActivity extends AppCompatActivity {
+public class LockTheScreenWidgetConfigureActivity extends Activity {
 
     private static final int REQUEST_CODE_ENABLE_ADMIN = 1;
 
