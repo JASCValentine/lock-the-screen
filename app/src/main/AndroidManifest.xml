@@ -43,7 +43,9 @@
             </intent-filter>
         </activity>
         <!-- Activity from clicking the widget at home screen -->
-        <activity android:name=".widget.LockTheScreenWidgetActivity" />
+        <activity
+            android:name=".widget.LockTheScreenWidgetActivity"
+            android:theme="@android:style/Theme.NoDisplay" />
     </application>
 
 </manifest>
