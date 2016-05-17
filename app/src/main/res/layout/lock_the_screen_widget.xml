@@ -4,9 +4,9 @@
     android:padding="@dimen/widget_margin">
 
     <ImageButton
+        android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/imageButton"
-        android:background="@drawable/power"
+        android:background="@drawable/ic_power_settings_new_white_48dp"
         android:contentDescription="@string/app_name" />
 </FrameLayout>
